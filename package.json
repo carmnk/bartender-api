@@ -1,0 +1,23 @@
+{
+  "name": "bartender-api",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "author": "carmnk",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --import tsx --watch src/server.ts",
+    "start": "node --env-file-if-exists=.env dist/server.js",
+    "build": "tsc",
+    "test": "tsx --test src/tests/*.test.ts",
+    "test:watch": "tsx watch --test src/tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=22.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
